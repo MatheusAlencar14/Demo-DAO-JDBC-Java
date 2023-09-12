@@ -24,5 +24,9 @@ public class Program2 {
         department.setName("Food");
         departmentDAO.update(department);
         System.out.println("Update concluído!");
+
+        System.out.println("\n=== TESTE 03 (Department delete) ===");
+        departmentDAO.deleteById(7);
+        System.out.println("Delete concluído!");
     }
 }
