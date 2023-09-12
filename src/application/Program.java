@@ -35,8 +35,12 @@ public class Program {
         System.out.println("\n=== TESTE 05 (Seller update) ===");
         seller = sellerDAO.findById(2);
         seller.setName("Maria Blue");
-        seller.setBaseSalary(3459.00);
+        seller.setDepartment(new Department(3, null));
         sellerDAO.update(seller);
         System.out.println("Update concluído!");
+
+        System.out.println("\n=== TESTE 06 (Seller delete) ===");
+        sellerDAO.deleteById(10);
+        System.out.println("Delete concluído!");
     }
 }
